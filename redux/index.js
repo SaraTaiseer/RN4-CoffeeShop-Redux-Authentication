@@ -1,7 +1,7 @@
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
-import { getCoffeeShops } from "./actions";
+import { getCoffeeShops, checkForToken } from "./actions";
 
 import rootReducer from "./reducers";
 
@@ -13,5 +13,6 @@ const store = createStore(
 );
 
 store.dispatch(getCoffeeShops());
+store.dispatch(checkForToken());
 
 export default store;

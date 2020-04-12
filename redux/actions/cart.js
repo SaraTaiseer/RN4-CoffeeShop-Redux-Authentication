@@ -1,15 +1,16 @@
 import { ADD_ITEM, REMOVE_ITEM, CHECKOUT } from "./types";
 
-export const addItemToCart = item => ({
+export const addItemToCart = (item) => ({
   type: ADD_ITEM,
-  payload: item
+  payload: item,
 });
 
-export const removeItemFromCart = item => ({
+export const removeItemFromCart = (item) => ({
   type: REMOVE_ITEM,
-  payload: item
+  payload: item,
 });
 
-export const checkoutCart = () => ({
-  type: CHECKOUT
+export const checkoutCart = (order) => ({
+  type: CHECKOUT,
+  payload: order,
 });

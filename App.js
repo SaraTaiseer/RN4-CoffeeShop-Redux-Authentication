@@ -11,22 +11,22 @@ import { Provider } from "react-redux";
 import store from "./redux";
 
 class App extends Component {
-  state = {
-    loading: true
-  };
+  // state = {
+  //   loading: true
+  // };
 
-  async componentDidMount() {
-    await loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
-    });
-    this.setState({ loading: false });
-  }
+  // async componentDidMount() {
+  //   await loadAsync({
+  //     Roboto: require("native-base/Fonts/Roboto.ttf"),
+  //     Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
+  //   });
+  //   this.setState({ loading: false });
+  // }
 
   render() {
-    if (this.state.loading) {
-      return <Spinner color="white" />;
-    }
+    // if (this.state.loading) {
+    //   return <Spinner color="white" />;
+    // }
     return (
       <Provider store={store}>
         <NavigationContainer>

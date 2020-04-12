@@ -13,7 +13,7 @@ import ShopStack from "./StackNavigators/ShopStack";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
-export default function RootTabNavigator() {
+function RootTabNavigator() {
   return (
     <Navigator
       initialRouteName={SHOP}
@@ -22,8 +22,8 @@ export default function RootTabNavigator() {
         activeTintColor: "white",
         inactiveTintColor: "black",
         style: {
-          backgroundColor: "rgb(20,90,100)"
-        }
+          backgroundColor: "rgb(20,90,100)",
+        },
       }}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color }) => {
@@ -47,7 +47,7 @@ export default function RootTabNavigator() {
               style={{ color }}
             />
           );
-        }
+        },
       })}
     >
       <Screen name={USER} component={UserStack} />
@@ -56,3 +56,5 @@ export default function RootTabNavigator() {
     </Navigator>
   );
 }
+
+export default RootTabNavigator;

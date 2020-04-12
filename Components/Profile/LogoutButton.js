@@ -1,10 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { Button, Text } from "native-base";
+import { connect } from "react-redux";
+// import { LOGIN } from "../../Navigation/screenNames";
+import { logout } from "../../redux/actions";
 
-const LogoutButton = () => (
-  <Button full danger onPress={() => alert("you wanna logout? make me!")}>
+const LogoutButton = ({ logout }) => (
+  <Button full danger onPress={() => logout()}>
     <Text>Logout</Text>
   </Button>
 );
-
-export default LogoutButton;
+const mapDispatchToProps = { logout };
+export default connect(null, mapDispatchToProps)(LogoutButton);

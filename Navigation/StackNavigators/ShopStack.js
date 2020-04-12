@@ -12,7 +12,7 @@ import screenOptions from "../screenOptions";
 
 const { Navigator, Screen } = createStackNavigator();
 
-export default function ShopStack() {
+function ShopStack() {
   return (
     <Navigator initialRouteName={COFFEESHOPS} screenOptions={screenOptions}>
       <Screen name={COFFEESHOPS} component={CoffeeList} />
@@ -24,3 +24,5 @@ export default function ShopStack() {
     </Navigator>
   );
 }
+
+export default ShopStack;
